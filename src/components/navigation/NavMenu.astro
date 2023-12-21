@@ -1,0 +1,28 @@
+---
+const links = [
+  {
+    label: 'Home',
+    href: '/',
+  },
+  {
+    label: 'Login',
+    href: '/login',
+  },
+  {
+    label: 'Private',
+    href: '/private',
+  },
+]
+---
+
+<nav class="justify-self-end">
+  <ul class="flex gap-4">
+    {
+      links.map((link) => (
+        <li>
+          <a href={link.href}>{link.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
